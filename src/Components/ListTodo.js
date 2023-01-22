@@ -3,7 +3,6 @@ import {
   AiFillEdit,
   AiOutlineCloseCircle,
   AiFillPlusCircle,
-  AiFillCheckCircle,
 } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteToDo, editTodo, completeTodo } from "../Reducers/toDoSlider";
@@ -48,7 +47,7 @@ const ListTodo = () => {
     setComplete(!isComplete);
     setState({ ...state, id, isComplete: !isComplete });
     dispatch(completeTodo({ id, isComplete }));
-    console.log(" completed" + { id });
+    console.log(id) ;
   };
 
   return (
@@ -78,10 +77,8 @@ const ListTodo = () => {
                 <Content>{content}</Content>
                 <span>
                   <Icon>
-                    <AiOutlineCloseCircle
-                      onClick={() => dispatch(deleteToDo({ id }))}
-                    />
                     <AiFillEdit onClick={() => onEditToggle(id, content)} />
+                    <AiOutlineCloseCircle onClick={() => dispatch(deleteToDo({ id }))}/>
                   </Icon>
                 </span>
               </Li>
@@ -139,14 +136,13 @@ const Li = styled.li`
   padding-right: 1rem;
   padding-left: 1rem;
   height: 4rem;
-}
+
 `;
 
 const Icon = styled.div`
   cursor: pointer;
   color: white;
   line-height: 4.5rem;
-  padding: 1px;
 `;
 
 const IconComplete = styled.div`
