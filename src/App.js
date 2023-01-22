@@ -1,13 +1,15 @@
 import styled from "styled-components";
-import AddTodo from "./Components/AddTodo";
-import ListTodo from "./Components/ListTodo";
+import AddTodo from "./view/AddTodo.view";
+import ListTodo from "./view/ListTodo.view";
+// import ListStatus from "./view/ListStatus.view";
 
 function App() {
   return (
     <Div>
       <h1> To Do App</h1>
       <AddTodo />
-      <ListTodo />
+      <ListTodo /> 
+      {/* <ListStatus/>   */}
     </Div>
   );
 }
@@ -23,7 +25,8 @@ const Div = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   border-radius: 10px;
-  background-color: #FFFBE9;
+  background-color: #E5D9B6;
+  width: 100%;
   h1 {
     font-size: 2rem;
     font-family: "Griffy", cursive;

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-
-import { AiFillEdit, AiOutlineCloseCircle } from "react-icons/ai";
+import { AiFillEdit, AiOutlineCloseCircle, AiFillPlusCircle, AiFillCheckCircle } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteToDo, editTodo } from "../Reducers/toDoSlider";
+import { deleteToDo, editTodo , completeTodo} from "../Reducers/toDoSlider";
+import styled from "styled-components";
 
 const ListTodo = () => {
   const { todoList } = useSelector((state) => state.toDo);
   const dispatch = useDispatch();
   const [isEditing, setEditing] = useState(false);
+  const [isComplete, setComplete] = useState(false);
+
   const [state, setState] = useState({
     id: "",
     content: "",
@@ -38,6 +39,15 @@ const ListTodo = () => {
     setEditing(false);
   };
 
+  const onCompleteToggel = (id) => {
+    setComplete(!isComplete);
+    setState({ ...state, id, isComplete: !isComplete  });
+    dispatch(completeTodo({ id ,isComplete}));
+    console.log(" completed" +{id})
+
+  };
+
+
   return (
     <Div>
       {isEditing ? (
@@ -54,102 +64,90 @@ const ListTodo = () => {
           {contentError ? <div className="error">{contentError}</div> : null}
         </div>
       ) : (
-        <Ul>
+      
+        <ul>
           {todoList.map(({ id, content }) => {
             return (
+             
               <Li key={id}>
-                <span className="content">{content}</span>
-                <span className="todo-action">
+                <IconComplete>
+                <AiFillPlusCircle onClick={() => onCompleteToggel(id)}/>
+                </IconComplete>
+                <Content>{content}</Content>
+                <span>
                   <Icon>
-                    <AiOutlineCloseCircle
-                      className="close"
-                      onClick={() => dispatch(deleteToDo({ id }))}
-                    />
-                  </Icon>
-                  <Icon>
-                    <AiFillEdit
-                      className="edit"
-                      onClick={() => onEditToggle(id, content)}
-                    />
+                  <AiOutlineCloseCircle onClick={() => dispatch(deleteToDo({ id }))}/>
+                  <AiFillEdit onClick={() => onEditToggle(id, content)} />
                   </Icon>
                 </span>
               </Li>
             );
           })}
-        </Ul>
+        </ul>
       )}
     </Div>
   );
 };
 export default ListTodo;
 
-const Icon = styled.div`
-  display: flex;
-  justify-content: center;
-  color: white;
-  &:hover {
-    color: black;
-  }
-`;
-
 const Div = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 1.2rem;
   input {
-    border: 5px outset #ccd6a6;
+    border-radius: 5px;
+    border: 3px solid #5f8d4e;
     font-family: "Griffy", cursive;
-    /* min-width: 30vw; */
     line-height: 2.5rem;
     font-size: 1.5rem;
-    font-weight: 300;
   }
   button {
-    background-color: #f4ead5;
-    border: 5px outset #ccd6a6;
-    /* min-width: 5vw; */
+    border-radius: 5px;
+    background-color: #5f8d4e;
+    line-height: 2.5rem;
     font-family: "Griffy", cursive;
     font-size: 1.5rem;
     color: #ffffff;
-    font-weight: 500;
     cursor: pointer;
     :hover {
-      background: #dae2b6;
-      color: #fffbe9;
+      background: #a4be7b;
+      color: #e5d9b6;
     }
   }
 `;
 
-const Ul = styled.ul`
-  display: flex;
-  flex-direction: column;
-  /* wrap: nowrap;
-  justify-content: space-between; */
-  align-items: center;
-`;
 const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
-  background: linear-gradient(90deg, #f4ead5 0%, #ccd6a6 100%);
+  background: #A4BE7B;
   line-height: 4rem;
   border-radius: 5px;
   font-family: "Griffy", cursive;
-  min-width: 30vw;
-  line-height: 2rem;
+  min-width: 60vw;
   font-size: 1.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  wrap: nowrap;
-  height: 45px;
-  justify-content: space-between;
-  align-items: center;
+  height: 4rem;
+}
+`;
+
+const Icon = styled.div`
+  cursor: pointer;
+  color: white;
+  line-height: 4.5rem;
+  padding: 1px;
+`;
+
+const IconComplete = styled.div`
+  cursor: pointer;
+  color: white;
+  line-height: 4.5rem;
+  :active{
+    color: black;
   }
 `;
 
-// const AiFillEdit = styled.li`
-//   display: flex;
-//   flex-direction: column;
-//   wrap: nowrap;
-//   justify-content: space-between;
-//   align-items: center;
-// `;
+const Content = styled.div`
+  min-width: 55vw;
+  padding-left: 1rem;
+`;
