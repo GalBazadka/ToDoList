@@ -25,9 +25,19 @@ export const toDoSlider = createSlice({
       state.todoList = todoList.map((item) => 
         item.id === action.payload.id ? action.payload : item);
     },
-    completeTodo: (state, action) => {
-      state.todos[action.payload].completed = true;
-    }
+    completeTodo: (state) => {
+      state.todos.completed = !state.todos.completed;
+    },
+  //   checkTodo: (state, action) => {
+  //     return {
+  //       ...state,
+  //       todoList: state.todoList.map((todo) => {
+  //         if (todo.id === action.payload) {
+  //           return { ...todo, checked: !todo.checked }
+  //         }
+  //         return todo
+  //       }),
+  //     }
    },
  })// Action creators are generated for each case reducer function
  export const { addToDo, deleteToDo, editTodo, completeTodo } = toDoSlider.actions

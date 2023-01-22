@@ -10,6 +10,8 @@ import styled from "styled-components";
 
 const ListTodo = () => {
   const { todoList } = useSelector((state) => state.toDo);
+  // const { completeTodo } = useSelector((state) => state.toDo.completeTodo);
+
   const dispatch = useDispatch();
   const [isEditing, setEditing] = useState(false);
   const [isComplete, setComplete] = useState(false);
@@ -50,6 +52,8 @@ const ListTodo = () => {
     console.log(id) ;
   };
 
+  
+
   return (
     <div>
       <Div>
@@ -67,7 +71,7 @@ const ListTodo = () => {
           {contentError ? <div className="error">{contentError}</div> : null}
         </div>
       ) : (
-        <ul>
+        <div>
           {todoList.map(({ id, content }) => {
             return (
               <Li key={id}>
@@ -77,14 +81,14 @@ const ListTodo = () => {
                 <Content>{content}</Content>
                 <span>
                   <Icon>
-                    <AiFillEdit onClick={() => onEditToggle(id, content)} />
+                    <AiFillEdit  onClick={() => onEditToggle(id, content)} />
                     <AiOutlineCloseCircle onClick={() => dispatch(deleteToDo({ id }))}/>
                   </Icon>
                 </span>
               </Li>
             );
           })}
-        </ul>
+        </div>
       )}
 
     </Div>
