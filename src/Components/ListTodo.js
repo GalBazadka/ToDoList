@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { AiFillEdit, AiOutlineCloseCircle, AiFillPlusCircle, AiFillCheckCircle } from "react-icons/ai";
+import {
+  AiFillEdit,
+  AiOutlineCloseCircle,
+  AiFillPlusCircle,
+  AiFillCheckCircle,
+} from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteToDo, editTodo , completeTodo} from "../Reducers/toDoSlider";
+import { deleteToDo, editTodo, completeTodo } from "../Reducers/toDoSlider";
 import styled from "styled-components";
 
 const ListTodo = () => {
@@ -41,15 +46,14 @@ const ListTodo = () => {
 
   const onCompleteToggel = (id) => {
     setComplete(!isComplete);
-    setState({ ...state, id, isComplete: !isComplete  });
-    dispatch(completeTodo({ id ,isComplete}));
-    console.log(" completed" +{id})
-
+    setState({ ...state, id, isComplete: !isComplete });
+    dispatch(completeTodo({ id, isComplete }));
+    console.log(" completed" + { id });
   };
 
-
   return (
-    <Div>
+    <div>
+      <Div>
       {isEditing ? (
         <div>
           <input
@@ -64,20 +68,20 @@ const ListTodo = () => {
           {contentError ? <div className="error">{contentError}</div> : null}
         </div>
       ) : (
-      
         <ul>
           {todoList.map(({ id, content }) => {
             return (
-             
               <Li key={id}>
                 <IconComplete>
-                <AiFillPlusCircle onClick={() => onCompleteToggel(id)}/>
+                  <AiFillPlusCircle onClick={() => onCompleteToggel(id)} />
                 </IconComplete>
                 <Content>{content}</Content>
                 <span>
                   <Icon>
-                  <AiOutlineCloseCircle onClick={() => dispatch(deleteToDo({ id }))}/>
-                  <AiFillEdit onClick={() => onEditToggle(id, content)} />
+                    <AiOutlineCloseCircle
+                      onClick={() => dispatch(deleteToDo({ id }))}
+                    />
+                    <AiFillEdit onClick={() => onEditToggle(id, content)} />
                   </Icon>
                 </span>
               </Li>
@@ -85,7 +89,14 @@ const ListTodo = () => {
           })}
         </ul>
       )}
+
     </Div>
+      <Filter>
+      <button type="button">All</button>
+      <button type="button">Active</button>
+      <button type="button">Completed</button>
+      </Filter>
+    </div>
   );
 };
 export default ListTodo;
@@ -142,12 +153,41 @@ const IconComplete = styled.div`
   cursor: pointer;
   color: white;
   line-height: 4.5rem;
-  :active{
+  :active {
     color: black;
   }
 `;
+
 
 const Content = styled.div`
   min-width: 55vw;
   padding-left: 1rem;
 `;
+
+
+const Filter = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+  button {
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    line-height: 2.5rem;
+    font-family: "Griffy", cursive;
+    font-size: 1rem;
+    padding: 0rem 1rem;
+    margin: 0.2rem;
+    color: #a4be7b;
+    cursor: pointer;
+    :hover {
+      /* background: #a4be7b; */
+      border: 3px solid #5f8d4e;
+      /* color: #e5d9b6; */
+    }
+    :active {
+        border: 3px solid #5f8d4e;
+        /* color: #e5d9b6; */
+    }
+  }
+`;
+

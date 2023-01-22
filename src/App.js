@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import AddTodo from "./Components/AddTodo";
 import ListTodo from "./Components/ListTodo";
-import ListStatus from "./Components/ListStatus";
+// import ListStatus from "./Components/ListStatus";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       {/* <h1> To Do App</h1> */}
       <AddTodo />
       <ListTodo />
-      <ListStatus/>
+      {/* <ListStatus/> */}
     </Div>
   );
 }
