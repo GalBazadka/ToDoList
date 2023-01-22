@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import AddTodo from "./view/AddTodo.view";
-import ListTodo from "./view/ListTodo.view";
-// import ListStatus from "./view/ListStatus.view";
+import AddTodo from "./Components/AddTodo";
+import ListTodo from "./Components/ListTodo";
+import ListStatus from "./Components/ListStatus";
 
 function App() {
   return (
     <Div>
-      <h1> To Do App</h1>
+      {/* <h1> To Do App</h1> */}
       <AddTodo />
-      <ListTodo /> 
-      {/* <ListStatus/>   */}
+      <ListTodo />
+      <ListStatus/>
     </Div>
   );
 }
