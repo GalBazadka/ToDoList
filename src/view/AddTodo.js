@@ -1,59 +1,44 @@
 import styled from "styled-components";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../Reducers/toDoSlice";
+import { addTodo } from "../state/toDoSlice";
 
 const AddTodo = () => {
-  
   const dispatch = useDispatch();
-  const [state, setState] = useState({
-    content: "",
-    contentError: null,
-  });
+  const content = useRef(null);
+  const [disabled, setDisabled] = useState(true);
 
-  const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-      [`${e.target.name}Error`]: null,
-    });
+  const handleChange = () => {
+    // setState(content.current.value);
+    const hasTxt = !!content.current.value.length;
+    setDisabled(!hasTxt);
   };
 
   const add = () => {
-    if (content === "") {
-      setState({ ...state, contentError: "You must write something!" });
-      return;
-    } else {
-      dispatch(addTodo({ newContent: content }));
-      setState({ ...state, content: "" });
+    console.log("addd");
+    if (content.current) {
+      dispatch(addTodo({ newContent: content.current.value }));
+      content.current.value = " ";
     }
   };
-  
-  const { content, contentError } = state;
 
   return (
-    <Form onSubmit={add}>
+    <Form onSubmit={add}>  
       <input
         type="text"
-        value={content}
-        name="content"
+        ref={content}
         placeholder=" Your next task"
         onChange={handleChange}
       ></input>
-      <button type="submit" className="button" onClick={add}>
-        Add
-      </button>
-      {contentError ? <Error>{contentError}</Error> : null}
+      <button disabled = {disabled}>Add</button>
     </Form>
   );
 };
-
 export default AddTodo;
 
 const Form = styled.form`
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
   margin-top: 1.2rem;
   align-items: center;
 
@@ -89,13 +74,4 @@ const Form = styled.form`
       color: #e5d9b6;
     }
   }
-`;
-
-const Error = styled.div`
-  font-family: "Griffy", cursive;
-  font-size: 1.2rem;
-  position: relative;
-  left: -7rem;
-  top: 3rem;
-  width: 100%;
 `;

@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import toDoReducer from './Reducers/toDoSlider';
-import { saveStorage, getInitialState } from "./state/localStorage.middleware"
+import toDoReducer from '../Reducers/toDoSlice';
+import { saveStorage, getInitialState } from "./localStorage.middleware"
 
 
 export default configureStore({
