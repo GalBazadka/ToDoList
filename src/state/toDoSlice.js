@@ -28,19 +28,60 @@ export const toDoSlider = createSlice({
       console.log(current(state))
     },
     showCompleted: (state, action) => {
-      let { todoList } = state;
-      state.todoList = todoList.filter((item) => item.completed === true);
-      console.log(current(state))
+
+      for (let i = 0; i < state.todoList.length; i++){
+        if (state.todoList[i].completed === true) {
+          state.todoList[i].show = true
+        }
+        else {
+          state.todoList[i].show = false
+        }
+      }
+
+      // const index = state.todoList.findIndex((item) => item.completed === true);
+      // state.todoList[index].show = true;
+      // console.log(index)
+
+
+      // let { todoList } = state;
+      // todoList.filter((item) => item.completed === true);
+      // console.log(current(state))
     },
     showActive: (state, action) => {
-      let { todoList } = state;
-      state.todoList = todoList.filter((item) => item.completed === false);
-      console.log(current(state))
+
+      for (let i = 0; i < state.todoList.length; i++){
+        if (state.todoList[i].completed === false) {
+          state.todoList[i].show = true
+        }
+        else {
+          state.todoList[i].show = false
+        }
+      }
+      
+
+      // const index = state.todoList.findIndex((item) => item.completed === false);
+      // state.todoList[index].show = true;
+      // console.log(current(state))
+
+      // let { todoList } = state;
+      // todoList.filter((item) => item.completed === false);
+      // console.log(current(state))
     },
     showAll: (state, action) => {
-      let { todoList } = state;
-      state.todoList = todoList.filter((item) => item.show === false || true );
-      console.log(current(state))
+
+      for (let i = 0; i < state.todoList.length; i++){
+        state.todoList[i].show = true
+      }
+      
+
+      // const index = state.todoList.findIndex((item) => item.completed === false || true);
+      // state.todoList[index].show = true;
+      // console.log(current(state))
+
+
+      // let { todoList } = state;
+      // todoList.filter((item) => item.show === false || true );
+      // console.log(current(state))
     },    
   }
 })

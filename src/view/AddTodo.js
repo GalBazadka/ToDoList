@@ -9,7 +9,6 @@ const AddTodo = () => {
   const [disabled, setDisabled] = useState(true);
 
   const handleChange = () => {
-    // setState(content.current.value);
     const hasTxt = !!content.current.value.length;
     setDisabled(!hasTxt);
   };

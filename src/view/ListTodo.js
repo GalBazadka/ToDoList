@@ -20,7 +20,7 @@ const ListTodo = () => {
         <div>
           {todoList.map(({ id, content, completed, show }) => {
             return (
-              show && (
+                show && (
                 <Li key={id} completed={completed}>
                   <IconComplete>
                     <AiFillPlusCircle
@@ -43,9 +43,9 @@ const ListTodo = () => {
         </div>
       </Div>
       <Filter>
-        <button name="all" onClick={() => dispatch(showAll())}>All </button>
-        <button name="active" onClick={() => dispatch(showActive())}>Active </button>
-        <button name="completed" onClick={() => dispatch(showCompleted())}>Completed </button>
+        <button bgAll={true} name="all" onClick={() => dispatch(showAll())} >All </button>
+        <button bgActive={true} name="active" onClick={() => dispatch(showActive())}>Active </button>
+        <button bgCompleted={true} name="completed" onClick={() => dispatch(showCompleted())}>Completed </button>
       </Filter>
     </div>
   );
@@ -127,15 +127,19 @@ const Filter = styled.div`
     padding: 0rem 1rem;
     margin: 0.2rem;
     color: #a4be7b;
+    /* background-color: ${(props) => (props.bgActive ? `#a4be7b` : `#a4be7b`)};  */
+    /* background-color: ${(props) => (props.bgAll ? `#a4be7b` : `#ffffff`)}; 
+    background-color: ${(props) => (props.bgCompleted ? `#a4be7b` : `#ffffff`)};  */
+
     cursor: pointer;
     :hover {
-      /* background: #a4be7b; */
+      background: #a4be7b;
       border: 3px solid #5f8d4e;
-      /* color: #e5d9b6; */
+      color: #e5d9b6;
     }
     :active {
       border: 3px solid #5f8d4e;
-      /* color: #e5d9b6; */
+      color: #e5d9b6;
     }
   }
 `;
