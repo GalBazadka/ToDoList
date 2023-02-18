@@ -87,7 +87,7 @@ display: flex;
     margin-top: 0.5rem;
     border-radius: 5px;
     background-color: white;
-    width: 4.5rem;
+    width: 6rem;
     height: 4.5rem;
     font-family: "Griffy", cursive;
     font-size: 1rem;
