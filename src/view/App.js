@@ -24,6 +24,8 @@ const Div = styled.div`
   border-radius: 10px;
   background-color: black;
   width: 100%;
+  height: 100%;
+  min-height: 100vh;
 `;
 
 
