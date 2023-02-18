@@ -86,7 +86,7 @@ display: flex;
   button {
     margin-top: 0.5rem;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: white;
     width: 4.5rem;
     height: 4.5rem;
     font-family: "Griffy", cursive;
