@@ -22,15 +22,8 @@ const Div = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   border-radius: 10px;
-  background-color: #E5D9B6;
+  background-color: black;
   width: 100%;
-  h1 {
-    font-size: 2rem;
-    font-family: "Griffy", cursive;
-    display: flex;
-    justify-content: center;
-    color: #CCD6A6;
-  }
 `;
 
 

@@ -27,64 +27,38 @@ export const toDoSlider = createSlice({
       state.todoList[index].completed = !state.todoList[index].completed;
       console.log(current(state))
     },
-    showCompleted: (state, action) => {
-
-      for (let i = 0; i < state.todoList.length; i++){
-        if (state.todoList[i].completed === true) {
-          state.todoList[i].show = true
-        }
-        else {
-          state.todoList[i].show = false
-        }
+    filterTodos: (state , action) => {
+      const visFilter = action.payload;
+      state.currentFilter = visFilter;
+      console.log(visFilter.currentFilter)
+      state.todoList.forEach((todo) => {
+        switch (visFilter.currentFilter){
+          case visFilter.currentFilter = "All":
+            document.getElementById('filterAll').style.color= "white";
+            document.getElementById('filterActive').style.color= "black";
+            document.getElementById('filterCompleted').style.color= "black";
+            todo.show = true;
+            break;
+            case visFilter.currentFilter = "Active":
+            todo.show = todo.completed === false;
+            document.getElementById('filterAll').style.color= "black";
+            document.getElementById('filterActive').style.color= "white";
+            document.getElementById('filterCompleted').style.color= "black";
+            break;
+            case visFilter.currentFilter = "Completed":
+              todo.show = todo.completed === true;
+              document.getElementById('filterAll').style.color= "black";
+              document.getElementById('filterActive').style.color= "black";
+              document.getElementById('filterCompleted').style.color= "white";
+              break;
+              default:
+                // do nothing
       }
-
-      // const index = state.todoList.findIndex((item) => item.completed === true);
-      // state.todoList[index].show = true;
-      // console.log(index)
-
-
-      // let { todoList } = state;
-      // todoList.filter((item) => item.completed === true);
-      // console.log(current(state))
+      });
     },
-    showActive: (state, action) => {
-
-      for (let i = 0; i < state.todoList.length; i++){
-        if (state.todoList[i].completed === false) {
-          state.todoList[i].show = true
-        }
-        else {
-          state.todoList[i].show = false
-        }
-      }
-      
-
-      // const index = state.todoList.findIndex((item) => item.completed === false);
-      // state.todoList[index].show = true;
-      // console.log(current(state))
-
-      // let { todoList } = state;
-      // todoList.filter((item) => item.completed === false);
-      // console.log(current(state))
-    },
-    showAll: (state, action) => {
-
-      for (let i = 0; i < state.todoList.length; i++){
-        state.todoList[i].show = true
-      }
-      
-
-      // const index = state.todoList.findIndex((item) => item.completed === false || true);
-      // state.todoList[index].show = true;
-      // console.log(current(state))
-
-
-      // let { todoList } = state;
-      // todoList.filter((item) => item.show === false || true );
-      // console.log(current(state))
-    },    
+  
   }
 })
 
-export const { addTodo, deleteToDo, checkTodo ,showAll, showActive, showCompleted} = toDoSlider.actions;
+export const { addTodo, deleteToDo, checkTodo, filterTodos} = toDoSlider.actions;
 export default toDoSlider.reducer;
