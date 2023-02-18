@@ -86,12 +86,12 @@ display: flex;
   button {
     margin-top: 0.5rem;
     border-radius: 5px;
-    background-color: #2f3542;
+    background-color: #ffffff;
     width: 4.5rem;
     height: 4.5rem;
     font-family: "Griffy", cursive;
     font-size: 1rem;
-    color: #ffffff;
+    color: #2f3542;
     font-weight: 500;
     cursor: pointer;
     :hover {
