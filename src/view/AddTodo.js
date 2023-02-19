@@ -63,7 +63,7 @@ display: flex;
 
   input {
     margin-top: 0.5rem;
-    background: #ffffff;
+    background: #2f3542;
     line-height: 4rem;
     border: 3px solid white;
     border-radius: 5px;
