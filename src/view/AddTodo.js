@@ -32,7 +32,7 @@ const AddTodo = () => {
     <div>
       <AddIcon>
         <AiFillPlusCircle
-          style={{ color: "#A66CFF", height: "6rem", width: "6rem" }}
+          style={{ color: "#9C9EFE", height: "6rem", width: "6rem" }}
           onClick={OpenNewTask}
         />
       </AddIcon>
@@ -63,7 +63,7 @@ display: flex;
 
   input {
     margin-top: 0.5rem;
-    background: #A66CFF;
+    background: #9C9EFE;
     line-height: 4rem;
     border: 3px solid white;
     border-radius: 5px;
@@ -86,7 +86,7 @@ display: flex;
   button {
     margin-top: 0.5rem;
     border-radius: 5px;
-    background-color: #A66CFF;
+    background-color: #9C9EFE;
     width: 5.5rem;
     height: 4.6rem;
     font-size: 1rem;

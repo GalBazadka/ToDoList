@@ -58,7 +58,7 @@ const Div = styled.div`
 const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
-  background: #AFB4FF;
+  background: #ffffff;
   line-height: 4rem;
   border: 3px solid ;
   border-radius: 5px;
