@@ -63,7 +63,7 @@ const Li = styled.li`
   border: 2px solid ;
   border-radius: 5px;
   font-family: 'Shantell Sans', cursive;
-    min-width: 60vw;
+  min-width: 60vw;
   font-size: 1.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -112,7 +112,6 @@ const Filter = styled.div`
     border-radius: 5px;
     background-color: #747d8c;
     line-height: 2.5rem;
-    font-family: "Griffy", cursive;
     font-size: 1rem;
     padding: 0rem 1rem;
     margin: 0.2rem;
