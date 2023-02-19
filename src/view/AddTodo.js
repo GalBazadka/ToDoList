@@ -88,7 +88,7 @@ display: flex;
     border-radius: 5px;
     background-color: #2f3542;
     width: 6rem;
-    height: 4.2rem;
+    height: 4.5rem;
     font-size: 1rem;
     color: #ffffff;
     font-weight: 500;
