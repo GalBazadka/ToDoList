@@ -65,7 +65,7 @@ display: flex;
     margin-top: 0.5rem;
     background: #9C9EFE;
     line-height: 4rem;
-    border: 3px solid white;
+    border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
     width: 14rem;
