@@ -32,7 +32,7 @@ const AddTodo = () => {
     <div>
       <AddIcon>
         <AiFillPlusCircle
-          style={{ color: "#2f3542", height: "6.5rem", width: "6.5rem" }}
+          style={{ color: "#2f3542", height: "6rem", width: "6rem" }}
           onClick={OpenNewTask}
         />
       </AddIcon>
