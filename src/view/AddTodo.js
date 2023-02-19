@@ -68,10 +68,10 @@ display: flex;
     border: 3px solid white;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
-    min-width: 35vw;
-    font-size: 1.3rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    width: 14rem;
+    font-size: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     height: 4rem;
     color: black;
     :active {
