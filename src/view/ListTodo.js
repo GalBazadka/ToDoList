@@ -62,8 +62,8 @@ const Li = styled.li`
   line-height: 4rem;
   border: 2px solid ;
   border-radius: 5px;
-  font-family: "Griffy", cursive;
-  min-width: 60vw;
+  font-family: 'Shantell Sans', cursive;
+    min-width: 60vw;
   font-size: 1.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
