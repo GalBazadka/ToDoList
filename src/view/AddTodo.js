@@ -88,9 +88,9 @@ display: flex;
     border-radius: 5px;
     background-color: #2f3542;
     width: 6rem;
-    height: 4.5rem;
+    height: 4.4rem;
     font-size: 1rem;
-    color: #2f3542;
+    color: #ffffff;
     font-weight: 500;
     cursor: pointer;
     :hover {
