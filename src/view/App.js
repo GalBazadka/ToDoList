@@ -22,7 +22,7 @@ const Div = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   border-radius: 10px;
-  background-color: black;
+  background-color: white;
   width: 100%;
   height: 100%;
   min-height: 100vh;

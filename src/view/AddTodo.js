@@ -89,7 +89,6 @@ display: flex;
     background-color: white;
     width: 6rem;
     height: 4.5rem;
-    font-family: "Griffy", cursive;
     font-size: 1rem;
     color: #2f3542;
     font-weight: 500;
