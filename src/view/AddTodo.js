@@ -73,7 +73,7 @@ display: flex;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     height: 4rem;
-    color: black;
+    color: white;
     :active {
       border: 3px solid #747d8c;
     }
