@@ -58,9 +58,9 @@ const Div = styled.div`
 const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
-  background: #2f3542;
+  background: #AFB4FF;
   line-height: 4rem;
-  border: 2px solid ;
+  border: 3px solid ;
   border-radius: 5px;
   font-family: 'Shantell Sans', cursive;
   min-width: 60vw;
@@ -68,19 +68,19 @@ const Li = styled.li`
   padding-right: 1rem;
   padding-left: 1rem;
   height: 4rem;
-  color: #ffffff;
+  color: black;
   text-decoration: ${(props) => (props.completed ? `line-through` : `none`)};
   &:nth-child(4n) {
-    border-color: #70a1ff;
+    border-color: #B1E1FF;
   }
   &:nth-child(4n + 1) {
-    border-color: #ff6b81; 
+    border-color: #B1E1FF; 
   }
   &:nth-child(4n + 2) {
-    border-color: #eccc68;
+    border-color: #B1E1FF;
   }
   &:nth-child(4n + 3) {
-    border-color: #7bed9f;
+    border-color: #B1E1FF;
   }
 `;
 
