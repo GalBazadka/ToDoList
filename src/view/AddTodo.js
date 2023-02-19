@@ -68,7 +68,7 @@ display: flex;
     border: 3px solid white;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
-    min-width: 40vw;
+    min-width: 35vw;
     font-size: 1.3rem;
     padding-right: 1rem;
     padding-left: 1rem;
