@@ -14,10 +14,10 @@ function App() {
 export default App;
 
 const Div = styled.div`
+
   margin: auto;
   margin-top: 1.2rem;
-  display: flex;
-  justify-content: center;
+
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -27,6 +27,8 @@ const Div = styled.div`
   height: 100%;
   min-height: 100vh;
   font-family: 'Shantell Sans', cursive;
+  display: flex;
+  justify-content: flex-start;
 `;
 
 

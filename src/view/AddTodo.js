@@ -55,8 +55,10 @@ const AddTodo = () => {
 };
 export default AddTodo;
 
+
+
 const Form = styled.form`
-display: flex;
+  display: flex;
   justify-content: center;
   margin-top: 1.2rem;
   align-items: center;
