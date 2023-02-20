@@ -75,7 +75,7 @@ display: flex;
     height: 4rem;
     color: white;
     :active {
-      border: 3px solid #747d8c;
+      border: 3px solid #FFD56F;
     }
     ::placeholder {
       color: #ffffff;
@@ -85,18 +85,18 @@ display: flex;
 
   button {
     margin-top: 0.5rem;
+    background: #939B62;
+    line-height: 4rem;
+    border: 3px solid ;
     border-radius: 5px;
-    background-color: #939B62;
-    width: 5.5rem;
-    height: 4.6rem;
-    font-size: 1rem;
-    color: #ffffff;
-    font-weight: 500;
     font-family: 'Shantell Sans', cursive;
-
+    width: 5rem;
+    font-size: 1rem;
+    height: 4rem;
+    color: white;
     cursor: pointer;
     :hover {
-      background: #57606f;
+      background: #FFD56F;
       color: #ffffff;
     }
   }
