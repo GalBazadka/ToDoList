@@ -58,7 +58,7 @@ const Div = styled.div`
 const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
-  background: #B1E1FF;
+  background: #ffffff;
   line-height: 4rem;
   border: 3px solid ;
   border-radius: 5px;
@@ -71,16 +71,16 @@ const Li = styled.li`
   color: black;
   text-decoration: ${(props) => (props.completed ? `line-through` : `none`)};
   &:nth-child(4n) {
-    border-color: #B1E1FF;
+    border-color: #939B62;
   }
   &:nth-child(4n + 1) {
-    border-color: #B1E1FF; 
+    border-color: #939B62; 
   }
   &:nth-child(4n + 2) {
-    border-color: #B1E1FF;
+    border-color: #939B62;
   }
   &:nth-child(4n + 3) {
-    border-color: #B1E1FF;
+    border-color: #939B62;
   }
 `;
 
