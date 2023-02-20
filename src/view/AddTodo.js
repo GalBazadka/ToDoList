@@ -92,7 +92,7 @@ display: flex;
     font-family: 'Shantell Sans', cursive;
     width: 5rem;
     font-size: 1rem;
-    height: 4rem;
+    height: 4.5rem;
     color: white;
     cursor: pointer;
     :hover {
