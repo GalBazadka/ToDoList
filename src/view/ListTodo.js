@@ -21,7 +21,7 @@ const ListTodo = () => {
                 <Li key={id} completed={completed}>
                   <IconComplete>
                     <AiFillPlusCircle
-                      style={{ color: completed ? "black" : "white" }}
+                      style={{ color: completed ? "#939B62" : "#FFB26B" }}
                       onClick={() => dispatch(checkTodo({ id }))}
                     />
                   </IconComplete>
@@ -86,13 +86,13 @@ const Li = styled.li`
 
 const Icon = styled.div`
   cursor: pointer;
-  color: white;
+  color: #FFB26B;
   line-height: 4.5rem;
 `;
 
 const IconComplete = styled.div`
   cursor: pointer;
-  color: black;
+  color: #FFB26B;
   line-height: 4.5rem;
   :active {
     color: black;
@@ -110,7 +110,7 @@ const Filter = styled.div`
   margin-top: 1.2rem;
   button {
     border-radius: 5px;
-    background-color: #747d8c;
+    background-color: #FFD56F;
     line-height: 2.5rem;
     font-size: 1rem;
     padding: 0rem 1rem;
