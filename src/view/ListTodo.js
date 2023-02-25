@@ -142,10 +142,7 @@ const Filter = styled.div`
     margin: 0.1rem;
     cursor: pointer;
     :hover {
-      color: #8fc0a9;
-    }
-    :active {
-      color: #8fc0a9;
+      color: #ffffff;
     }
   }
 `;
