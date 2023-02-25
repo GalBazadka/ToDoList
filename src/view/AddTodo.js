@@ -67,7 +67,7 @@ const Form = styled.form`
     margin-top: 0.5rem;
     margin-right: 0.5%;
     background: #68B0AB;
-    /* line-height: 4rem; */
+    line-height: 4rem;
     border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
@@ -88,7 +88,7 @@ const Form = styled.form`
   button {
     margin-top: 0.5rem;
     background: #68B0AB;
-    /* line-height: 4rem; */
+    line-height: 4rem;
     border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
