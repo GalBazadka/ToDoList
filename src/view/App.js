@@ -2,15 +2,18 @@ import styled from "styled-components";
 import AddTodo from "./AddTodo"
 import ListTodo from "./ListTodo"
 import NewTask from "./NewTask"
-import Background from "../img/wallpaper.webp";
+import Filter from "./Filter"
+import Background from "../img/WavesBeach.jpeg";
+
 
 function App() {
   return (
     <Div>
+      <NewTask />
       <Title> To Do List:</Title>
       <AddTodo />
       <ListTodo />
-      <NewTask />
+      <Filter/>
     </Div>
   );
 }
@@ -35,7 +38,7 @@ const Div = styled.div`
 
 const Title = styled.div`
   margin-top: 0px;
-  height: 100px;
+  height: 10vh;
   font-size: 300%;
   text-align: center;
 `;
