@@ -26,6 +26,7 @@ const AddIcon = styled.form`
   display: flex;
   justify-content: center;
   color: #68b0ab;
-  opacity: 0.6;
+  color: #ffffff;
+  opacity: 0.9;
 
 `;
