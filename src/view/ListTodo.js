@@ -138,6 +138,10 @@ const Content = styled.div`
 `;
 
 const Filter = styled.div`
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+
   display: flex;
   justify-content: center;
   margin-top: 1.2rem;
