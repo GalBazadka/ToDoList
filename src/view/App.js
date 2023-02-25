@@ -3,7 +3,7 @@ import AddTodo from "./AddTodo"
 import ListTodo from "./ListTodo"
 import NewTask from "./NewTask"
 import Filter from "./Filter"
-import Background from "../img/wave2.jpg";
+import Background from "../img/clouds.jpg";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 export default App;
 
 const Div = styled.div`
-margin: auto;
+  margin: auto;
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
@@ -43,7 +43,7 @@ const Title = styled.div`
   font-size: 300%;
   font-weight: 900;
   text-align: center;
-  color: white;
+  /* color: white; */
 `;
 
 

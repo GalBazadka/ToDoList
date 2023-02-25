@@ -39,6 +39,8 @@ const Filter = styled.div`
   button {
     border-radius: 5px;
     background-color: #68b0ab;
+    background: #FFC3A1;
+
     opacity: 0.8;
     line-height: 2.5rem;
     font-size: 0.9rem;

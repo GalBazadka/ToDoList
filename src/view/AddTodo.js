@@ -49,6 +49,8 @@ const Form = styled.form`
   input {
     margin-right: 0.3rem;
     background: #68b0ab;
+    background: #FFC3A1;
+
     line-height: 4rem;
     border: 3px solid;
     border-radius: 5px;
@@ -68,7 +70,10 @@ const Form = styled.form`
   }
 
   button {
+    
     background: #68b0ab;
+    background: #FFC3A1;
+
     line-height: 4rem;
     border: 3px solid;
     border-radius: 5px;
