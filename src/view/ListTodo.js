@@ -1,7 +1,7 @@
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteToDo, checkTodo, filterTodos } from "../state/toDoSlice";
+import { deleteToDo, checkTodo } from "../state/toDoSlice";
 import Background from "../img/liBack.jpg";
 import styled from "styled-components";
 
@@ -59,26 +59,6 @@ const ListTodo = () => {
           })}
         </div>
       </Div>
-      <Filter>
-        <button
-          id="filterAll"
-          onClick={() => dispatch(filterTodos({ currentFilter: "All" }))}
-        >
-          All{" "}
-        </button>
-        <button
-          id="filterActive"
-          onClick={() => dispatch(filterTodos({ currentFilter: "Active" }))}
-        >
-          Active{" "}
-        </button>
-        <button
-          id="filterCompleted"
-          onClick={() => dispatch(filterTodos({ currentFilter: "Completed" }))}
-        >
-          Completed{" "}
-        </button>
-      </Filter>
     </div>
   );
 };
@@ -87,7 +67,7 @@ export default ListTodo;
 const Div = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
 `;
 
 const Li = styled.li`
@@ -105,44 +85,9 @@ const Li = styled.li`
   height: 4rem;
   color: black;
   text-decoration: ${(props) => (props.completed ? `line-through` : `none`)};
-  &:nth-child(4n) {
-    border-color: #8fc0a9;
-  }
-  &:nth-child(4n + 1) {
-    border-color: #8fc0a9;
-  }
-  &:nth-child(4n + 2) {
-    border-color: #8fc0a9;
-  }
-  &:nth-child(4n + 3) {
-    border-color: #8fc0a9;
-  }
 `;
 
 const Content = styled.div`
   min-width: 55vw;
   padding-left: 1rem;
-`;
-
-const Filter = styled.div`
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  button {
-    border-radius: 5px;
-    background-color: #68b0ab;
-    opacity: 0.8;
-    line-height: 2.5rem;
-    font-size: 0.9rem;
-    color: black;
-    width: 6.5rem;
-    text-align: center;
-    margin: 0.1rem;
-    cursor: pointer;
-    :hover {
-      color: #ffffff;
-    }
-  }
 `;

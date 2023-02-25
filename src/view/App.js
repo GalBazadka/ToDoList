@@ -4,7 +4,6 @@ import ListTodo from "./ListTodo"
 import NewTask from "./NewTask"
 import Background from "../img/wallpaper.webp";
 
-
 function App() {
   return (
     <Div>
@@ -19,7 +18,6 @@ function App() {
 export default App;
 
 const Div = styled.div`
-
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
@@ -34,7 +32,6 @@ const Div = styled.div`
   display: flex;
   justify-content: flex-start;
 `;
-
 
 const Title = styled.div`
   margin-top: 0px;
