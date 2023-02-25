@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import AddTodo from "./AddTodo"
 import ListTodo from "./ListTodo"
+import Background from "../img/wallpaper.webp";
+
 
 function App() {
   return (
@@ -15,20 +17,18 @@ export default App;
 
 const Div = styled.div`
 
-  margin: auto;
-  margin-top: 1.2rem;
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
   border-radius: 10px;
-  background-color: #EDF2FA;
+  background-image: url(${Background});
+  background-repeat: no-repeat;
   width: 100%;
   min-height: 75vh; 
   position: relative;
   font-family: 'Shantell Sans', cursive;
   display: flex;
   justify-content: flex-start;
-
 `;
 
 

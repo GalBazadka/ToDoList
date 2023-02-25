@@ -2,6 +2,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteToDo, checkTodo, filterTodos } from "../state/toDoSlice";
+import Background from "../img/back.jpg";
 import styled from "styled-components";
 
 const ListTodo = () => {
@@ -10,7 +11,7 @@ const ListTodo = () => {
 
   return (
     <div>
-      <Title>Your tasks</Title>
+      <Title> To Do List:</Title>
       <Div id="List">
         <div>
           {todoList.map(({ id, content, completed, show }) => {
@@ -45,13 +46,11 @@ const ListTodo = () => {
                   <Content>{content}</Content>
                   <span>
                     <AiOutlineCloseCircle
-                    style={{
-                      color: "#8fc0a9",
-                      cursor: "pointer",
-                      marginTop: "1.5rem",
-
-
-                    }}
+                      style={{
+                        color: "#8fc0a9",
+                        cursor: "pointer",
+                        marginTop: "1.5rem",
+                      }}
                       onClick={() => dispatch(deleteToDo({ id }))}
                     />
                   </span>
@@ -87,10 +86,11 @@ const ListTodo = () => {
 export default ListTodo;
 
 const Title = styled.div`
-background-image: url("src/img/todo.jpg");
-height: 200px;
+  margin-top: 0px;
+  height: 20vh;
+  font-size: 300%;
+  text-align: center;
 `;
-
 
 const Div = styled.div`
   display: flex;
@@ -102,10 +102,12 @@ const Div = styled.div`
 const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
-  background: #ffffff;
+  background-image: url(${Background});
+
+  /* background: #ffffff; */
   line-height: 4rem;
-  border: 3px solid;
-  border-radius: 5px;
+  /* border: 3px solid; */
+  /* border-radius: 5px; */
   font-family: "Shantell Sans", cursive;
   min-width: 90%;
   font-size: 1.2rem;
