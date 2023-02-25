@@ -30,7 +30,6 @@ const AddTodo = () => {
 
   return (
     <div>
-      <i class="bi bi-plus-circle-fill"></i>
       <AddIcon>
         <AiFillPlusCircle
           style={{ color: "#68B0AB", height: "6rem", width: "6rem" }}

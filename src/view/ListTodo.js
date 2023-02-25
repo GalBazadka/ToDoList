@@ -145,7 +145,7 @@ const Filter = styled.div`
     border-radius: 5px;
     background-color: #faf3dd;
     line-height: 2.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: black;
     width: 6rem;
     text-align: center;
