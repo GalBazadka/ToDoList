@@ -74,7 +74,7 @@ const Form = styled.form`
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    height: 4rem;
+    height:  2%;
     color: white;
     :active {
       border: 3px solid ;
@@ -91,10 +91,11 @@ const Form = styled.form`
     line-height: 4rem;
     border: 3px solid ;
     border-radius: 5px;
+    border-left: 0px;
     font-family: 'Shantell Sans', cursive;
     width: 5rem;
     font-size: 1rem;
-    height: 4.8rem;
+    height: 2%;
     color: white;
     cursor: pointer;
     :hover {
