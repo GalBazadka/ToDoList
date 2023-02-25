@@ -30,6 +30,7 @@ const AddTodo = () => {
 
   return (
     <div>
+      
       <AddIcon>
         <AiFillPlusCircle
           style={{ color: "#68B0AB", height: "6rem", width: "6rem" }}
@@ -55,8 +56,6 @@ const AddTodo = () => {
 };
 export default AddTodo;
 
-
-
 const Form = styled.form`
   display: flex;
   justify-content: center;
@@ -65,13 +64,13 @@ const Form = styled.form`
 
   input {
     margin-top: 0.5rem;
-    margin-right: 0.5%;
+    margin-right: 0.3rem;
     background: #68B0AB;
     line-height: 4rem;
     border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
-    max-width: 60%;
+    width: 55%;
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -92,7 +91,8 @@ const Form = styled.form`
     border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
-    min-width: 15%;
+    width: 17%;
+    max-width: 15vh;
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;

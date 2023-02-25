@@ -5,8 +5,8 @@ import ListTodo from "./ListTodo"
 function App() {
   return (
     <Div>
-      <AddTodo />
       <ListTodo />
+      <AddTodo />
     </Div>
   );
 }

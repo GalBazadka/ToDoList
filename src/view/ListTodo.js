@@ -10,6 +10,7 @@ const ListTodo = () => {
 
   return (
     <div>
+      <Title>Your tasks</Title>
       <Div id="List">
         <div>
           {todoList.map(({ id, content, completed, show }) => {
@@ -85,6 +86,12 @@ const ListTodo = () => {
 };
 export default ListTodo;
 
+const Title = styled.div`
+background-image: url("src/img/todo.jpg");
+height: 200px;
+`;
+
+
 const Div = styled.div`
   display: flex;
   justify-content: center;
@@ -100,7 +107,7 @@ const Li = styled.li`
   border: 3px solid;
   border-radius: 5px;
   font-family: "Shantell Sans", cursive;
-  min-width: 80%;
+  min-width: 90%;
   font-size: 1.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
