@@ -21,6 +21,7 @@ function App() {
 export default App;
 
 const Div = styled.div`
+margin: auto;
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
