@@ -99,7 +99,7 @@ const Form = styled.form`
     color: white;
     cursor: pointer;
     :hover {
-      background: #FAF3DD;
+      background: white;
       color: black;
     }
   }
