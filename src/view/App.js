@@ -21,7 +21,7 @@ const Div = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 4rem;
   border-radius: 10px;
-  background-color: #C8D5B9;
+  background-color: #EDF2FA;
   width: 100%;
   min-height: 75vh; 
   position: relative;
