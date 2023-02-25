@@ -97,7 +97,7 @@ const Li = styled.li`
   border: 3px solid;
   border-radius: 5px;
   font-family: "Shantell Sans", cursive;
-  min-width: 60vw;
+  min-width: 80%;
   font-size: 1.2rem;
   padding-right: 1rem;
   padding-left: 1rem;

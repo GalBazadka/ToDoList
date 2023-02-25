@@ -70,11 +70,11 @@ const Form = styled.form`
     border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
-    width: 14rem;
+    max-width: 60%;
+    height:  2%;
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    height:  2%;
     color: white;
     :active {
       border: 3px solid ;
@@ -93,8 +93,8 @@ const Form = styled.form`
     border-radius: 5px;
     border-left: 0px;
     font-family: 'Shantell Sans', cursive;
-    width: 5rem;
     font-size: 1rem;
+    min-width: 15%;
     height: 2%;
     color: white;
     cursor: pointer;
