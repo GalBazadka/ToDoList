@@ -30,6 +30,7 @@ const AddTodo = () => {
 
   return (
     <div>
+      <i class="bi bi-plus-circle-fill"></i>
       <AddIcon>
         <AiFillPlusCircle
           style={{ color: "#68B0AB", height: "6rem", width: "6rem" }}
@@ -77,7 +78,7 @@ const Form = styled.form`
     height: 4rem;
     color: white;
     :active {
-      border: 3px solid #FFD56F;
+      border: 3px solid ;
     }
     ::placeholder {
       color: #ffffff;
@@ -98,8 +99,8 @@ const Form = styled.form`
     color: white;
     cursor: pointer;
     :hover {
-      background: #FFD56F;
-      color: #ffffff;
+      background: #FAF3DD;
+      color: black;
     }
   }
 `;
