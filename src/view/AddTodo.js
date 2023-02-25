@@ -95,7 +95,7 @@ const Form = styled.form`
     font-family: 'Shantell Sans', cursive;
     font-size: 1rem;
     min-width: 15%;
-    height: 2%;
+    /* height: 2%; */
     color: white;
     cursor: pointer;
     :hover {
