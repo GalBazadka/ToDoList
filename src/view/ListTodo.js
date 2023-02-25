@@ -1,4 +1,5 @@
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteToDo, checkTodo, filterTodos } from "../state/toDoSlice";
 import styled from "styled-components";
@@ -15,41 +16,43 @@ const ListTodo = () => {
             return (
               show && (
                 <Li key={id} completed={completed}>
-                  <IconComplete>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="black"
-                      style={{ display: completed ? "none" : "block" }}
-                      onClick={() => {
-                        dispatch(checkTodo({ id }));
-                      }}
-                    >
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />{" "}
-                    </svg>
+                  <BsCircle
+                    style={{
+                      display: completed ? "none" : "block",
+                      height: "1rem",
+                      width: "1rem",
+                      cursor: "pointer",
+                      marginTop: "1.5rem",
+                    }}
+                    onClick={() => {
+                      dispatch(checkTodo({ id }));
+                    }}
+                  />
+                  <BsCheckCircle
+                    style={{
+                      display: completed ? "block" : "none",
+                      height: "1rem",
+                      width: "1rem",
+                      cursor: "pointer",
+                      marginTop: "1.5rem",
+                    }}
+                    onClick={() => {
+                      dispatch(checkTodo({ id }));
+                    }}
+                  />
 
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="black"
-                      style={{ display: completed ? "block" : "none" }}
-                      onClick={() => {
-                        dispatch(checkTodo({ id }));
-                      }}
-                    >
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                    </svg>
-                  </IconComplete>
                   <Content>{content}</Content>
                   <span>
-                    <Icon>
-                      <AiOutlineCloseCircle
-                        onClick={() => dispatch(deleteToDo({ id }))}
-                      />
-                    </Icon>
+                    <AiOutlineCloseCircle
+                    style={{
+                      color: "#8fc0a9",
+                      cursor: "pointer",
+                      marginTop: "1.5rem",
+
+
+                    }}
+                      onClick={() => dispatch(deleteToDo({ id }))}
+                    />
                   </span>
                 </Li>
               )
@@ -118,17 +121,6 @@ const Li = styled.li`
   }
 `;
 
-const Icon = styled.div`
-  cursor: pointer;
-  color: #8fc0a9;
-  line-height: 4.5rem;
-`;
-
-const IconComplete = styled.div`
-  cursor: pointer;
-  margin-top: 1.5rem;
-`;
-
 const Content = styled.div`
   min-width: 55vw;
   padding-left: 1rem;
@@ -142,9 +134,9 @@ const Filter = styled.div`
   justify-content: center;
   button {
     border-radius: 5px;
-    background-color: #68B0AB;
+    background-color: #68b0ab;
 
-    opacity: 0.8;   
+    opacity: 0.8;
     line-height: 2.5rem;
     font-size: 0.9rem;
     color: black;
