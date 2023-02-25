@@ -30,7 +30,7 @@ margin: auto;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 85vh; 
+  min-height: 80vh; 
   position: relative;
   font-family: 'Shantell Sans', cursive;
   display: flex;
