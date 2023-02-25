@@ -86,6 +86,7 @@ const Div = styled.div`
   display: flex;
   justify-content: center;
   margin-top: -4.5rem;
+  margin-bottom: 1rem;
 `;
 
 const Li = styled.li`
@@ -125,11 +126,6 @@ const Icon = styled.div`
 
 const IconComplete = styled.div`
   cursor: pointer;
-  /* color: #ffb26b;
-  line-height: 4.5rem;
-  :active {
-    color: yellowgreen;
-  } */
 `;
 
 const Content = styled.div`
@@ -138,13 +134,11 @@ const Content = styled.div`
 `;
 
 const Filter = styled.div`
-  position: fixed;
-  bottom: 2rem;
+  position: absolute;
+  bottom: 1rem;
   width: 100%;
-
   display: flex;
   justify-content: center;
-  margin-top: 1.2rem;
   button {
     border-radius: 5px;
     background-color: #faf3dd;

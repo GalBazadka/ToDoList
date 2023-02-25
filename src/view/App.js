@@ -17,18 +17,18 @@ const Div = styled.div`
 
   margin: auto;
   margin-top: 1.2rem;
-
   flex-direction: column;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 4rem;
   border-radius: 10px;
   background-color: #C8D5B9;
   width: 100%;
-  height: 100%;
-  min-height: 100vh;
+  min-height: 82vh; 
+  position: relative;
   font-family: 'Shantell Sans', cursive;
   display: flex;
   justify-content: flex-start;
+
 `;
 
 
