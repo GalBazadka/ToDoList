@@ -27,7 +27,7 @@ const AddIcon = styled.form`
   justify-content: center;
   color: #68b0ab;
   color: #F0997D;
-  /* color: #ffffff; */
-  opacity: 0.;
+  color: #ffffff;
+  opacity: 0.8;
 
 `;
