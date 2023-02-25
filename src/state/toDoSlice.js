@@ -34,7 +34,7 @@ export const toDoSlider = createSlice({
       state.todoList.forEach((todo) => {
         switch (visFilter.currentFilter){
           case visFilter.currentFilter = "All":
-            document.getElementById('filterAll').style.color= "#8FC0A9";
+            document.getElementById('filterAll').style.color= "white";
             document.getElementById('filterActive').style.color= "black";
             document.getElementById('filterCompleted').style.color= "black";
             todo.show = true;
@@ -42,14 +42,14 @@ export const toDoSlider = createSlice({
             case visFilter.currentFilter = "Active":
             todo.show = todo.completed === false;
             document.getElementById('filterAll').style.color= "black";
-            document.getElementById('filterActive').style.color= "#8FC0A9";
+            document.getElementById('filterActive').style.color= "white";
             document.getElementById('filterCompleted').style.color= "black";
             break;
             case visFilter.currentFilter = "Completed":
               todo.show = todo.completed === true;
               document.getElementById('filterAll').style.color= "black";
               document.getElementById('filterActive').style.color= "black";
-              document.getElementById('filterCompleted').style.color= "#8FC0A9";
+              document.getElementById('filterCompleted').style.color= "white";
               break;
               default:
                 // do nothing

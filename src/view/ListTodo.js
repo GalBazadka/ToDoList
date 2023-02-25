@@ -141,7 +141,7 @@ const Filter = styled.div`
   justify-content: center;
   button {
     border-radius: 5px;
-    background-color: #faf3dd;
+    background-color: #68B0AB;
     line-height: 2.5rem;
     font-size: 0.9rem;
     color: black;
