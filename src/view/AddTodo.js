@@ -65,13 +65,13 @@ const Form = styled.form`
 
   input {
     margin-top: 0.5rem;
+    margin-right: 0.5%;
     background: #68B0AB;
     line-height: 4rem;
     border: 3px solid ;
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
     max-width: 60%;
-    /* height:  2%; */
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -91,11 +91,11 @@ const Form = styled.form`
     line-height: 4rem;
     border: 3px solid ;
     border-radius: 5px;
-    border-left: 0px;
     font-family: 'Shantell Sans', cursive;
-    font-size: 1rem;
     min-width: 15%;
-    /* height: 2%; */
+    font-size: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     color: white;
     cursor: pointer;
     :hover {
