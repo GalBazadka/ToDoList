@@ -21,7 +21,7 @@ const ListTodo = () => {
                 <Li key={id} completed={completed}>
                   <IconComplete>
                     <AiFillPlusCircle
-                      style={{ color: completed ? "#939B62" : "#FFB26B" }}
+                      style={{ color: completed ? "#C8D5B9" : "#8FC0A9" }}
                       onClick={() => dispatch(checkTodo({ id }))}
                     />
                   </IconComplete>
@@ -71,22 +71,22 @@ const Li = styled.li`
   color: black;
   text-decoration: ${(props) => (props.completed ? `line-through` : `none`)};
   &:nth-child(4n) {
-    border-color: #939B62;
+    border-color: #8FC0A9;
   }
   &:nth-child(4n + 1) {
-    border-color: #939B62; 
+    border-color: #8FC0A9; 
   }
   &:nth-child(4n + 2) {
-    border-color: #939B62;
+    border-color: #8FC0A9;
   }
   &:nth-child(4n + 3) {
-    border-color: #939B62;
+    border-color: #8FC0A9;
   }
 `;
 
 const Icon = styled.div`
   cursor: pointer;
-  color: #FFB26B;
+  color: #8FC0A9;
   line-height: 4.5rem;
 `;
 
@@ -110,19 +110,19 @@ const Filter = styled.div`
   margin-top: 1.2rem;
   button {
     border-radius: 5px;
-    background-color: #FFD56F;
+    background-color: #FAF3DD;
     line-height: 2.5rem;
     font-size: 1rem;
-    padding: 0rem 1rem;
-    margin: 0.2rem;
     color: black;
+    width: 6rem;
+    text-align: center;
 
     cursor: pointer;
     :hover {
-      color: #ffffff;
+      color: #8FC0A9;
     }
     :active {
-      color: #ffffff;
+      color: #8FC0A9;
     }
   }
 `;
