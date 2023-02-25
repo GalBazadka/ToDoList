@@ -108,4 +108,5 @@ const Form = styled.form`
 const AddIcon = styled.form`
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 `;
