@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../state/toDoSlice";
-import { AiFillPlusCircle } from "react-icons/ai";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
@@ -12,12 +11,6 @@ const AddTodo = () => {
   const handleChange = () => {
     const hasTxt = !!content.current.value.length;
     setDisabled(!hasTxt);
-  };
-
-  const OpenNewTask = () => {
-    document.getElementById("newTask").style.visibility = "visible";
-    document.getElementById("AddButton").style.visibility = "visible";
-    document.getElementById("List").style.marginTop = "0rem";
   };
 
   const add = () => {
@@ -30,26 +23,18 @@ const AddTodo = () => {
 
   return (
     <div>
-      
-      <AddIcon>
-        <AiFillPlusCircle
-          style={{ color: "#68B0AB", height: "6rem", width: "6rem" }}
-          onClick={OpenNewTask}
-        />
-      </AddIcon>
       <Form onSubmit={add}>
         <input
           id="newTask"
-          style={{ visibility: "hidden" }}
+          style={{ display: "none" }}
           type="text"
           ref={content}
           placeholder=" Your next task"
           onChange={handleChange}
         ></input>
-        <button
-        id = "AddButton"
-        style={{ visibility: "hidden" }}
-        disabled={disabled}>Add</button>
+        <button id="AddButton" style={{ display: "none" }} disabled={disabled}>
+          Add
+        </button>
       </Form>
     </div>
   );
@@ -59,24 +44,22 @@ export default AddTodo;
 const Form = styled.form`
   display: flex;
   justify-content: center;
-  margin-top: 1.2rem;
   align-items: center;
 
   input {
-    margin-top: 0.5rem;
     margin-right: 0.3rem;
-    background: #68B0AB;
+    background: #68b0ab;
     line-height: 4rem;
-    border: 3px solid ;
+    border: 3px solid;
     border-radius: 5px;
-    font-family: 'Shantell Sans', cursive;
+    font-family: "Shantell Sans", cursive;
     width: 55%;
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     color: white;
     :active {
-      border: 3px solid ;
+      border: 3px solid;
     }
     ::placeholder {
       color: #ffffff;
@@ -85,12 +68,11 @@ const Form = styled.form`
   }
 
   button {
-    margin-top: 0.5rem;
-    background: #68B0AB;
+    background: #68b0ab;
     line-height: 4rem;
-    border: 3px solid ;
+    border: 3px solid;
     border-radius: 5px;
-    font-family: 'Shantell Sans', cursive;
+    font-family: "Shantell Sans", cursive;
     width: 17%;
     max-width: 15vh;
     font-size: 1rem;
@@ -103,10 +85,4 @@ const Form = styled.form`
       color: black;
     }
   }
-`;
-
-const AddIcon = styled.form`
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
 `;

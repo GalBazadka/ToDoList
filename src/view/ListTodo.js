@@ -2,7 +2,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteToDo, checkTodo, filterTodos } from "../state/toDoSlice";
-import Background from "../img/back.jpg";
+import Background from "../img/liBack.jpg";
 import styled from "styled-components";
 
 const ListTodo = () => {
@@ -11,7 +11,6 @@ const ListTodo = () => {
 
   return (
     <div>
-      <Title> To Do List:</Title>
       <Div id="List">
         <div>
           {todoList.map(({ id, content, completed, show }) => {
@@ -85,17 +84,9 @@ const ListTodo = () => {
 };
 export default ListTodo;
 
-const Title = styled.div`
-  margin-top: 0px;
-  height: 20vh;
-  font-size: 300%;
-  text-align: center;
-`;
-
 const Div = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: -4.5rem;
   margin-bottom: 1rem;
 `;
 
@@ -103,11 +94,9 @@ const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
   background-image: url(${Background});
-
-  /* background: #ffffff; */
+  background-repeat: no-repeat;
+  background-size: cover;
   line-height: 4rem;
-  /* border: 3px solid; */
-  /* border-radius: 5px; */
   font-family: "Shantell Sans", cursive;
   min-width: 90%;
   font-size: 1.2rem;
@@ -144,7 +133,6 @@ const Filter = styled.div`
   button {
     border-radius: 5px;
     background-color: #68b0ab;
-
     opacity: 0.8;
     line-height: 2.5rem;
     font-size: 0.9rem;
@@ -152,7 +140,6 @@ const Filter = styled.div`
     width: 6.5rem;
     text-align: center;
     margin: 0.1rem;
-
     cursor: pointer;
     :hover {
       color: #8fc0a9;
