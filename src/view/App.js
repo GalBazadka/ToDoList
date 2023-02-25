@@ -23,7 +23,7 @@ const Div = styled.div`
   border-radius: 10px;
   background-color: #C8D5B9;
   width: 100%;
-  min-height: 82vh; 
+  min-height: 75vh; 
   position: relative;
   font-family: 'Shantell Sans', cursive;
   display: flex;
