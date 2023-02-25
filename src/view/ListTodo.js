@@ -147,6 +147,7 @@ const Filter = styled.div`
     color: black;
     width: 6rem;
     text-align: center;
+    margin: 0.1rem;
 
     cursor: pointer;
     :hover {
