@@ -71,7 +71,7 @@ const Form = styled.form`
     border-radius: 5px;
     font-family: 'Shantell Sans', cursive;
     max-width: 60%;
-    height:  2%;
+    /* height:  2%; */
     font-size: 1rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
