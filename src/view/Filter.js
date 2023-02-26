@@ -46,6 +46,7 @@ const Filter = styled.div`
     font-size: 0.9rem;
     text-align: center;
     color: black;
+    font-weight:600;
     cursor: pointer;
     :hover {
       color: #B05E27;
