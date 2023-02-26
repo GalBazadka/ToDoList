@@ -17,33 +17,30 @@ function App() {
     </Div>
   );
 }
-
 export default App;
 
 const Div = styled.div`
   margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
-  border-radius: 10px;
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 80vh; 
-  position: relative;
+  border-radius: 10px;
   font-family: 'Shantell Sans', cursive;
-  display: flex;
-  justify-content: flex-start;
 `;
 
 const Title = styled.div`
-  margin-top: 0px;
   height: 10vh;
   font-size: 300%;
   font-weight: 900;
   text-align: center;
-  /* color: white; */
 `;
 
 

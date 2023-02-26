@@ -48,17 +48,15 @@ const Form = styled.form`
 
   input {
     margin-right: 0.3rem;
-    background: #68b0ab;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     background: #FFC3A1;
-
+    width: 55%;
     line-height: 4rem;
     border: 3px solid;
     border-radius: 5px;
     font-family: "Shantell Sans", cursive;
-    width: 55%;
     font-size: 1rem;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
     color: white;
     :active {
       border: 3px solid;
@@ -70,19 +68,16 @@ const Form = styled.form`
   }
 
   button {
-    
-    background: #68b0ab;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     background: #FFC3A1;
-
+    width: 17%;
+    max-width: 15vh;
     line-height: 4rem;
     border: 3px solid;
     border-radius: 5px;
     font-family: "Shantell Sans", cursive;
-    width: 17%;
-    max-width: 15vh;
     font-size: 1rem;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
     color: white;
     cursor: pointer;
     :hover {

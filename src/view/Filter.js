@@ -11,19 +11,19 @@ const AddTodo = () => {
         id="filterAll"
         onClick={() => dispatch(filterTodos({ currentFilter: "All" }))}
       >
-        All{" "}
+        All
       </button>
       <button
         id="filterActive"
         onClick={() => dispatch(filterTodos({ currentFilter: "Active" }))}
       >
-        Active{" "}
+        Active
       </button>
       <button
         id="filterCompleted"
         onClick={() => dispatch(filterTodos({ currentFilter: "Completed" }))}
       >
-        Completed{" "}
+        Completed
       </button>
     </Filter>
   );
@@ -32,22 +32,20 @@ export default AddTodo;
 
 const Filter = styled.div`
   position: absolute;
-  width: 100%;
   bottom: 10px;
   display: flex;
   justify-content: center;
+  width: 100%;
   button {
+    margin: 0.1rem;
     border-radius: 5px;
-    background-color: #68b0ab;
-    background: #FFC3A1;
-
+    background: #ffc3a1;
     opacity: 0.8;
+    width: 6.5rem;
     line-height: 2.5rem;
     font-size: 0.9rem;
-    color: black;
-    width: 6.5rem;
     text-align: center;
-    margin: 0.1rem;
+    color: black;
     cursor: pointer;
     :hover {
       color: #ffffff;

@@ -25,9 +25,6 @@ export default AddTodo;
 const AddIcon = styled.form`
   display: flex;
   justify-content: center;
-  color: #68b0ab;
-  color: #F0997D;
   color: #ffffff;
   opacity: 0.8;
-
 `;

@@ -25,10 +25,7 @@ const ListTodo = () => {
                       cursor: "pointer",
                       marginTop: "1.2rem",
                     }}
-                    onClick={() => {
-                      dispatch(checkTodo({ id }));
-                    }}
-                  />
+                    onClick={() => dispatch(checkTodo({ id }))}                  />
                   <BsCheckCircle
                     style={{
                       display: completed ? "block" : "none",
@@ -37,11 +34,8 @@ const ListTodo = () => {
                       cursor: "pointer",
                       marginTop: "1.2rem",
                     }}
-                    onClick={() => {
-                      dispatch(checkTodo({ id }));
-                    }}
+                    onClick={() => dispatch(checkTodo({ id }))}
                   />
-
                   <Content>{content}</Content>
                   <span>
                     <AiOutlineCloseCircle
@@ -73,16 +67,16 @@ const Div = styled.div`
 const Li = styled.li`
   display: flex;
   margin-top: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 90%;
+  height: 3.5rem;
   line-height: 3.5rem;
   font-family: "Shantell Sans", cursive;
-  min-width: 90%;
   font-size: 1.2rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  height: 3.5rem;
   color: black;
   text-decoration: ${(props) => (props.completed ? `line-through` : `none`)};
 `;
