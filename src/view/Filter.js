@@ -48,7 +48,7 @@ const Filter = styled.div`
     color: black;
     cursor: pointer;
     :hover {
-      color: #ffffff;
+      color: #B05E27;
     }
   }
 `;
