@@ -1,13 +1,20 @@
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteToDo, checkTodo } from "../state/toDoSlice";
+import { deleteToDo, checkTodo, filterTodos } from "../state/toDoSlice";
 import Background from "../img/liBackground.jpg";
 import styled from "styled-components";
+import { useState } from "react";
 
 const ListTodo = () => {
   const { todoList } = useSelector((state) => state.toDo);
   const dispatch = useDispatch();
+  const [selectedFilter, setSelectedFilter] = useState("All");
+
+  const changefilter = (newFilter) => {
+    dispatch(filterTodos({ currentFilter: newFilter }));
+    setSelectedFilter(newFilter);
+  };
 
   return (
     <div>
@@ -25,15 +32,10 @@ const ListTodo = () => {
                       cursor: "pointer",
                       marginTop: "1.2rem",
                     }}
-                    onClick={() => dispatch(checkTodo({ id }))}                  />
+                    onClick={() => dispatch(checkTodo({ id }))}
+                  />
                   <BsCheckCircle
-                    style={{
-                      display: completed ? "block" : "none",
-                      height: "1rem",
-                      width: "1rem",
-                      cursor: "pointer",
-                      marginTop: "1.2rem",
-                    }}
+                    style={BsCheckCircleStyle(completed)}
                     onClick={() => dispatch(checkTodo({ id }))}
                   />
                   <Content>{content}</Content>
@@ -53,10 +55,38 @@ const ListTodo = () => {
           })}
         </div>
       </Div>
+      <Filter>
+        <Button
+          selected={selectedFilter === "All"}
+          onClick={() => changefilter("All")}
+        >
+          All
+        </Button>
+        <Button
+          selected={selectedFilter === "Active"}
+          onClick={() => changefilter("Active")}
+        >
+          Active
+        </Button>
+        <Button
+          selected={selectedFilter === "Completed"}
+          onClick={() => changefilter("Completed")}
+        >
+          Completed
+        </Button>
+      </Filter>
     </div>
   );
 };
 export default ListTodo;
+
+const BsCheckCircleStyle =(completed)=>({
+  display: completed ? "block" : "none",
+  height: "1rem",
+  width: "1rem",
+  cursor: "pointer",
+  marginTop: "1.2rem",
+})
 
 const Div = styled.div`
   display: flex;
@@ -84,4 +114,33 @@ const Li = styled.li`
 const Content = styled.div`
   min-width: 55vw;
   padding-left: 1rem;
+`;
+
+const Filter = styled.div`
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+const Button = styled.div`
+  margin: 0.1rem;
+  border-radius: 5px;
+  background: #ffc3a1;
+  opacity: 0.8;
+  width: 6.5rem;
+  line-height: 2.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+  color: ${(props) => (props.selected  ? `#B05E27` : `black`)};
+  color: ${(props) => (props.selected  ? `#B05E27` : `black`)};
+  color: ${(props) =>
+    (props.selected ? `#B05E27` : `black`)};
+
+  cursor: pointer;
+  :hover {
+    color: #b05e27;
+  }
 `;

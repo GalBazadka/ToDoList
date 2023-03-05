@@ -13,7 +13,8 @@ const AddTodo = () => {
     setDisabled(!hasTxt);
   };
 
-  const add = () => {
+  const add = (evt) => {
+    evt.preventDefault();
     console.log("addd");
     if (content.current) {
       dispatch(addTodo({ newContent: content.current.value }));

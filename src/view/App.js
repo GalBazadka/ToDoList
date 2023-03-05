@@ -13,7 +13,7 @@ function App() {
       <Title> To Do List:</Title>
       <AddTodo />
       <ListTodo />
-      <Filter/>
+      {/* <Filter/> */}
     </Div>
   );
 }
