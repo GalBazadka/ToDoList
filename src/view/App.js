@@ -3,7 +3,7 @@ import AddTodo from "./AddTodo"
 import ListTodo from "./ListTodo"
 import NewTask from "./NewTask"
 import Filter from "./Filter"
-import Background from "../img/wallpepper.jpg";
+import Background from "../img/paper.jpg";
 
 
 function App() {

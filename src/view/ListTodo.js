@@ -2,7 +2,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteToDo, checkTodo, filterTodos } from "../state/toDoSlice";
-import Background from "../img/liBackground.jpg";
+import Background from "../img/liBack.png";
 import styled from "styled-components";
 import { useState } from "react";
 
