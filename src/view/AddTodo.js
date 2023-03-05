@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../state/toDoSlice";
+import { useState } from "react";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
